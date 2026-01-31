@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Market Analysis Bot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="container">
+    <h1>Market Analysis Signal Bot</h1>
+
+    <div class="form">
+        <label>Select Market</label>
+        <select id="symbol">
+            <option value="EURUSD=X">EUR/USD</option>
+            <option value="GBPUSD=X">GBP/USD</option>
+            <option value="BTC-USD">BTC/USD</option>
+        </select>
+
+        <label>Select Timeframe</label>
+        <select id="interval">
+            <option value="1m">1 Minute</option>
+            <option value="5m">5 Minutes</option>
+            <option value="15m">15 Minutes</option>
+        </select>
+
+        <button onclick="getSignal()">Get Signal</button>
+    </div>
+
+    <div class="result">
+        <h2 id="signal">Signal: -</h2>
+        <h3 id="confidence">Confidence: -</h3>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
